@@ -21,7 +21,9 @@ class _PlacesDetailsState extends State<PlacesDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Add new Place'),
+        title: const Text(
+          'Add new Place',
+        ),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(12),
@@ -35,7 +37,9 @@ class _PlacesDetailsState extends State<PlacesDetails> {
                 )),
             ElevatedButton.icon(
               onPressed: () {},
-              label: const Text('add'),
+              label: const Text(
+                'add',
+              ),
               icon: const Icon(Icons.add),
             ),
           ],

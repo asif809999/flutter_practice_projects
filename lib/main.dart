@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_practice_projects/screens/places.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 /* final colorScheme = ColorScheme.fromSeed(
   brightness: Brightness.dark,
@@ -42,18 +41,25 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Great Places',
       theme: ThemeData().copyWith(
-          useMaterial3: true,
-          colorScheme: kColorScheme,
-          appBarTheme: const AppBarTheme().copyWith(
-            backgroundColor: kColorScheme.onPrimaryContainer,
-            foregroundColor: kColorScheme.primaryContainer,
+        useMaterial3: true,
+        colorScheme: kColorScheme,
+        appBarTheme: const AppBarTheme().copyWith(
+          backgroundColor: kColorScheme.onPrimaryContainer,
+          foregroundColor: kColorScheme.primaryContainer,
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: kColorScheme.primaryContainer,
           ),
-          textTheme: ThemeData().textTheme.copyWith(
-                  titleLarge: TextStyle(
+        ),
+        textTheme: ThemeData().textTheme.copyWith(
+              titleLarge: TextStyle(
                 color: kColorScheme.onSecondaryContainer,
                 fontWeight: FontWeight.normal,
                 fontSize: 14,
-              ))),
+              ),
+            ),
+      ),
       home: const Places(),
     );
   }
